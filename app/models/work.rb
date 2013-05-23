@@ -1,5 +1,5 @@
 class Work < ActiveRecord::Base
-  belongs_to :artist
+  belongs_to :artist, :inverse_of => :work
   has_and_belongs_to_many :styles
   validates :title, :presence => true
   validates :artist, :presence => true
